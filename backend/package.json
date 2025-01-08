@@ -9,6 +9,7 @@
   "author": "Manisha Bose",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "mongoose": "^8.9.3",
     "zod": "^3.24.1"
