@@ -11,9 +11,9 @@ app.post("/",(req,res)=>{
 });
 
 app.put("/",(req,res)=>{
-    
+
 })
 
-app.listen(port,()=>{
-    console.log(`App listening on port ${port}`);
+app.listen(PORT,()=>{
+    console.log(`App listening on port ${PORT}`);
 })
