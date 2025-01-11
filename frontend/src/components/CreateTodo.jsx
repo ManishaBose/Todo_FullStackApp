@@ -11,7 +11,7 @@ export function CreateTodo(){
             setDescription(e.target.value);
         }}></input> <br/> <br/>
         <button onClick={()=>{
-            fetch("http://localhost:3000/",
+            fetch("https://todo-fullstackapp-backend.onrender.com",
             {
                 method: "POST",
                 body: JSON.stringify({

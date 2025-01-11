@@ -7,7 +7,7 @@ function App() {
   const [todos, setTodos] = useState([]);
 
   //not the right way to do this. useEffect() hook should be used instead
-  fetch("http://localhost:3000/").then(async function(res){
+  fetch("https://todo-fullstackapp-backend.onrender.com").then(async function(res){
     const json = await res.json();
     setTodos(json.todos);
   })

@@ -6,7 +6,7 @@ export function Todos({todos}){
                 <h1>{todo.title}</h1>
                 <p>{todo.description}</p>
                 <button onClick={()=>{
-                    fetch("http://localhost:3000/",
+                    fetch("https://todo-fullstackapp-backend.onrender.com",
                     {
                         method: "PUT",
                         body: JSON.stringify({
