@@ -4,29 +4,21 @@ import { CreateTodo } from './components/CreateTodo'
 import { Todos } from './components/Todos'
 
 function App() {
-  const todoTemp = [{
-      "_id": {
-        "$oid": "677f61dd2c4c6219dc2f697b"
-      },
-      "title": "Finish building Todo App",
-      "description": "Use React for frontend, node for backend, and mongodb for database",
-      "completed": true,
-      "__v": 0
-  },{
-    "_id": {
-      "$oid": "6780151eda945e2fd33efd04"
-    },
-    "title": "LeetCode Daily Problem",
-    "description": "A question on string matching",
-    "completed": false,
-    "__v": 0
-  }]
+  const [todos, setTodos] = useState([]);
+
+  //not the right way to do this. useEffect() hook should be used instead
+  fetch("http://localhost:3000/").then(async function(res){
+    const json = await res.json();
+    setTodos(json.todos);
+  })
   return (
       <div>
         <CreateTodo/>
-        <Todos todos={todoTemp}/>
+        <Todos todos={todos}/>
       </div>
   )
+
 }
+
 
 export default App

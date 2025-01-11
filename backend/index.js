@@ -1,10 +1,12 @@
 const express = require('express');
+const cors = require("cors");
 const { createTodoSchema, updateTodoSchema } = require('./types');
 const { Todo } = require('./db');
 const PORT = 3000;
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
 function validatePostInput(obj){
     const response = createTodoSchema.safeParse(obj);
